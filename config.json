@@ -63,7 +63,7 @@
 		},
 		{
 			"name": "Lasagna",
-			"url": "https://github.com/BernardoGiordano/Lasagna/",
+			"url": "https://github.com/BernardoGiordano/Lasagna",
 			"inrelease": "Lasagna\\.cia",
 			"path": "/cias/Lasagna.cia"
 		},
@@ -71,7 +71,7 @@
 			"name": "JK's Save Manager",
 			"url": "https://github.com/J-D-K/JKSM",
 			"inrelease": "JKSM.*\\.zip",
-			"inarchive": "JKSM.\\cia",
+			"inarchive": "JKSM\\.cia",
 			"path": "/cias/JKSM.cia"
 		},
 		{
@@ -87,27 +87,9 @@
 			"path": "/cias/WhiteHairedCatGirl.cia"
 		},
 		{
-			"name": "EasyRPG",
-			"url": "https://ci.easyrpg.org/view/Player/job/player-3ds/lastSuccessfulBuild/artifact/*zip*/archive.zip",
-			"inarchive": "archive/builds/3ds/easyrpg-player\\.cia",
-			"path": "/cias/easyrpg-player.cia"
-		},
-		{
-			"name": "adv-ds-profile",
-			"url": "https://notabug.org/arc13/Adv-DS-Profile",
-			"inrelease": "advdsprofile\\.cia",
-			"path": "/cias/advdsprofile.cia"
-		},
-		{
-			"name": "Quake 2",
-			"url": "https://github.com/masterfeizz/Quake2CTR",
-			"inrelease": "Quake2CTR\\.cia",
-			"path": "/cias/Quake2CTR.cia"
-		},
-		{
-			"name": "3DSident (GUI)",
+			"name": "3DSident",
 			"url": "https://github.com/joel16/3DSident",
-			"inrelease": "3DSident_GUI\\.cia",
+			"inrelease": "3DSident-GUI.cia",
 			"path": "/cias/3DSident_GUI.cia"
 		}
 	]
