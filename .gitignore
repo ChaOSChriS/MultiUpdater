@@ -12,3 +12,4 @@
 *.map
 build/*
 out/*
+config_wip.json
