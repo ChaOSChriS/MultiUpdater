@@ -26,7 +26,7 @@ void Entry::update(bool deleteArchive, bool deleteCia)
 {
 	printf("\x1b[40;34mUpdating %s...\x1b[0m\n", name.c_str());
 	std::string downloadPath;
-	
+
 	//if the file to download isnt an archive, direcly download where wanted
 	if (m_inArchive.empty()) {
 		downloadPath = m_path;
@@ -37,29 +37,29 @@ void Entry::update(bool deleteArchive, bool deleteCia)
 		downloadPathStream << WORKING_DIR << "/" << name.c_str() << ".archive";
 		downloadPath = downloadPathStream.str();
 	}
-	
+
 	Result ret = 0;
-	
+
 	//if the entry doesnt want anything from a release, expect it to be a normal file
 	if (m_inRelease.empty())
 		ret = downloadToFile(m_url, downloadPath, false);
 	else
 		ret = downloadFromRelease(m_url, m_inRelease, downloadPath);
-	
+
 	if (ret != 0) {
 		printf("\x1b[40;31mDownload failed!");
 		goto failure;
 	}
 	else
 		printf("\x1b[40;32mDownload successful!");
-	
+
 	if (!(m_inArchive.empty())) {
 		printf("\n\x1b[40;34mExtracting file from the archive...\x1b[0m\n");
 		ret = extractArchive(downloadPath, m_inArchive, m_path);
-		
+
 		if (deleteArchive)
 			deleteFile(downloadPath.c_str());
-		
+
 		if (ret != 0) {
 			printf("\x1b[40;31mExtraction failed!");
 			goto failure;
@@ -67,13 +67,13 @@ void Entry::update(bool deleteArchive, bool deleteCia)
 		else
 			printf("\x1b[40;32mExtraction successful!");
 	}
-	
+
 	if (matchPattern(".*(\\.cia)$", m_path)) {
 		printf("\n\x1b[40;34mInstalling CIA...\x1b[0m\n");
 		ret = installCia(m_path.c_str());
 		if (deleteCia)
 			deleteFile(m_path.c_str());
-		
+
 		if (ret != 0) {
 			printf("\x1b[40;31mInstall failed!");
 			goto failure;
@@ -81,11 +81,11 @@ void Entry::update(bool deleteArchive, bool deleteCia)
 		else
 			printf("\x1b[40;32mInstall successful!");
 	}
-	
+
 	printf("\n\x1b[40;32mUpdate complete!\x1b[0m\n");
 	state = STATE_SUCCESS;
 	return;
-	
+
 	failure:
 	printf("\n\x1b[40;31mUpdate failed!\n");
 	printf("\x1b[40;33mError code: %.8lx\x1b[0m\n", ret);
@@ -98,11 +98,11 @@ Config::Config()
 	m_selfUpdater = true;
 	m_deleteCIA = false;
 	m_deleteArchive = true;
-	
+
 	Handle configHandle;
 	char* configString = nullptr;
 	Result ret = openFile(&configHandle, CONFIG_FILE_PATH, false);
-	
+
 	if (R_FAILED(ret)) {
 		json configDownloadJson;
 		configDownloadJson["name"] = "Download the latest example config!";
@@ -132,9 +132,9 @@ Config::Config()
 
 		if (m_selfUpdater) {
 			json selfUpdaterJson;
-			selfUpdaterJson["url"] = "https://github.com/LiquidFenrir/MultiUpdater";
+			selfUpdaterJson["url"] = "https://github.com/ChaOSChriS/MultiUpdater";
 			selfUpdaterJson["inrelease"] = "MultiUpdater.*\\.zip";
-			
+
 			if (envIsHomebrew()) {
 				selfUpdaterJson["name"] = "MultiUpdater (3dsx)";
 				selfUpdaterJson["inarchive"] = (char*)HBL_FILE_PATH+1;
