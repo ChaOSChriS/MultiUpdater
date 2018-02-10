@@ -11,7 +11,7 @@ include $(DEVKITARM)/3ds_rules
 
 APP_TITLE        :=  MultiUpdater
 APP_DESCRIPTION  :=  Updater for FIRM payloads, CIAs, and other files.
-APP_AUTHOR       :=  LiquidFenrir
+APP_AUTHOR       :=  ChaOSDroid
 
 TARGET           :=  MultiUpdater
 OUTDIR           :=  out
