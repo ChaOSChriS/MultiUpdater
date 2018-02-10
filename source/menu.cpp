@@ -6,7 +6,7 @@ static const unsigned int MAX_ENTRIES_PER_SCREEN = 20;
 
 static const unsigned int MENU_Y_OFFSET = 5;
 static const unsigned int MENU_X_OFFSET = 5;
-static const char MENU_DELIMITER_CHAR = '=';
+static const char MENU_DELIMITER_CHAR = '#';
 
 static const unsigned int TITLE_Y_OFFSET = 3;
 static const unsigned int TITLE_X_OFFSET = 3;
@@ -68,7 +68,7 @@ void drawMenu(Config config, unsigned int selectedEntry)
 	for (i = verticalScroll; i < (MAX_ENTRIES_PER_SCREEN + verticalScroll); i++) {
 		if (i >= config.entries.size())
 			break;
-		
+
 		// Gets the color of the text depending on the state of the entry
 		// black for selected, white for normal
 		// red for failed, green for success, yellow for marked
@@ -94,6 +94,6 @@ void drawMenu(Config config, unsigned int selectedEntry)
 			config.entries[i].name.c_str() + ((i == selectedEntry) ? horizontalScroll : 0)
 		);
 	}
-	
+
 	printf("\x1b[0m\x1b[%u;%uH%*s\n", TITLE_Y_OFFSET+MAX_ENTRIES_PER_SCREEN+MENU_Y_OFFSET, TITLE_X_OFFSET, MENU_WIDTH+TITLE_X_OFFSET+1, "Press START to quit.");
 }
