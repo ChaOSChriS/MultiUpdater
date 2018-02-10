@@ -35,7 +35,7 @@
 		},
 		{
 			"name": "SafeB9SInstaller (latest commit)",
-			"url": "",
+			"url": "https://github.com/d0k3/SafeB9SInstaller/releases/latest",
 			"inarchive": "SafeB9SInstaller.firm",
 			"path": "/luma/payloads/SafeB9SInstaller.firm"
 		},
