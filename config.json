@@ -1,4 +1,4 @@
-{
+}	
 	"config": {
 		"self_updater": true,
 		"delete_archives": true,
@@ -6,43 +6,109 @@
 	},
 	"entries": [
 		{
-			"name": "Anemone3DS",
-			"url": "https://github.com/astronautlevel2/Anemone3DS",
-			"inrelease": "Anemone3DS\\.cia",
-			"path": "/cias/Anemone3DS.cia"
+			"name": "Luma3DS (latest commit)",
+			"url": "https://astronautlevel2.github.io/Luma3DS/latest.zip",
+			"inarchive": "out/boot.firm",
+			"path": "/boot.firm"
 		},
 		{
-			"name": "3DSident",
-			"url": "https://github.com/joel16/3DSident",
-			"inrelease": "3DSident_GUI\\.cia",
-			"path": "/cias/3DSident_GUI.cia"
+			"name": "Luma3DS",
+			"url": "https://github.com/AuroraWright/Luma3DS",
+			"inrelease": "Luma3DSv*z",
+			"inarchive": "boot.firm",
+			"path": "/boot.firm"
 		},
 		{
-			"name": "GodMode9 (latest release)",
-			"url": "https://github.com/d0k3/GodMode9",
-			"inrelease": "GodMode9.*\\.zip",
-			"inarchive": "GodMode9\\.firm",
+			"name": "CTRNAND Luma3DS",
+			"url": "https://github.com/AuroraWright/Luma3DS",
+			"inrelease": "Luma3DSv*z",
+			"inarchive": "boot.firm",
+			"path": "ctrnand:/boot.firm"
+		},
+		{
+			"name": "GodMode9",
+			"url": "http://d0k3.secretalgorithm.com/GodMode9/latest.zip",
+			"inarchive": "GodMode9.firm",
 			"path": "/luma/payloads/GodMode9.firm"
 		},
 		{
-			"name": "Luma3DS (latest commit)",
-			"url": "https://astronautlevel2.github.io/Luma3DS/latest.zip",
-			"inarchive": "out/boot\\.firm",
-			"path": "/boot.firm"
+			"name": "GodMode9TD switched displays",
+			"url": "http://d0k3.secretalgorithm.com/GodMode9TD/latest.zip",
+			"inarchive": "GodMode9.firm",
+			"path": "/luma/payloads/GodMode9.firm"
 		},
 		{
-			"name": "Luma3DS (latest release)",
-			"url": "https://github.com/AuroraWright/Luma3DS",
-			"inrelease": "Luma3DS.*\\.7z",
-			"inarchive": "boot\\.firm",
-			"path": "/boot.firm"
+			"name": "SafeB9SInstaller",
+			"url": "http://d0k3.secretalgorithm.com/SafeB9SInstaller/latest.zip",
+			"inarchive": "SafeB9SInstaller.firm",
+			"path": "/luma/payloads/SafeB9SInstaller.firm"
 		},
 		{
-			"name": "CTRNAND Luma3DS (latest release)",
-			"url": "https://github.com/AuroraWright/Luma3DS",
-			"inrelease": "Luma3DS.*\\.7z",
-			"inarchive": "boot\\.firm",
-			"path": "ctrnand:/boot.firm"
+			"name": "SafeMode9",
+			"url": "http://d0k3.secretalgorithm.com/SafeMode9/latest.zip",
+			"inarchive": "SafeMode9.firm",
+			"path": "/luma/payloads/SafeMode9.firm.firm"
+		},
+		{
+			"name": "A9NC",
+			"url": "http://d0k3.secretalgorithm.com/A9NC/latest.zip",
+			"inarchive": "3ds-arm/A9NC.cia",
+			"path": "/cias/A9NC.cia"
+		},
+		{
+			"name": "CTRXplorer",
+			"url": "https://d0k3.secretalgorithm.com/CTRXplorer/latest.zip",
+			"inarchive": "3ds-arm/CTRXplorer.cia",
+			"path": "/cias/CTRXplorer.cia"
+		},
+		{
+			"name": "Lasagna",
+			"url": "https://github.com/BernardoGiordano/Lasagna/",
+			"inrelease": "Lasagna.cia",
+			"path": "/cias/Lasagna.cia"
+		},	
+		{
+			"name": "JK's Save Manager",
+			"url": "https://github.com/J-D-K/JKSM",
+			"inrelease": "JKSM.*.zip",
+			"inarchive": "JKSM.cia",
+			"path": "/cias/JKSM.cia"
+		},
+		{
+			"name": "Anemone3DS",
+			"url": "https://github.com/astronautlevel2/Anemone3DS",
+			"inrelease": "Anemone3DS.cia",
+			"path": "/cias/Anemone3DS.cia"
+		},
+		{
+			"name": "Discord client",
+			"url": "https://github.com/yourWaifu/Unofficial-Discord-3DS-Client",
+			"inrelease": "WhiteHairedCatGirl.cia",
+			"path": "/cias/WhiteHairedCatGirl.cia"
+		},
+		{
+			"name": "EasyRPG",
+			"url": "https://ci.easyrpg.org/view/Player/job/player-3ds/lastSuccessfulBuild/artifact/*zip*/archive.zip",
+			"inarchive": "archive/builds/3ds/easyrpg-player.cia",
+			"path": "/cias/easyrpg-player.cia"
+		},
+		{
+			"name": "adv-ds-profile",
+			"url": "https://notabug.org/arc13/Adv-DS-Profile",
+			"inrelease": "advdsprofile.cia",
+			"path": "/cias/advdsprofile.cia"
+		},
+		{
+			"name": "Quake 2",
+			"url": "https://github.com/masterfeizz/Quake2CTR",
+			"inrelease": "Quake2CTR.cia",
+			"path": "/cias/Quake2CTR.cia"
+		},
+		{
+			"name": "3DSident (GUI)",
+			"url": "https://github.com/joel16/3DSident",
+			"inrelease": "3DSident_GUI.cia",
+			"path": "/cias/3DSident_GUI.cia"
 		}
 	]
 }
